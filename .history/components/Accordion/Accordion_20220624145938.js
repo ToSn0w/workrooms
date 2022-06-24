@@ -1,7 +1,4 @@
-import React, { useState } from "react";
-import { motion } from "framer-motion";
-
-import Image from "next/Image";
+import React from "react";
 
 import {
   AccordionHeader,
@@ -13,15 +10,19 @@ import {
 const Accordion = ({ details, expanded, setExpanded }) => {
   const isOpen = details.id === expanded;
 
-  const [breakLine, setBreakLine] = useState(true);
-
   const handleClick = () => {
     setExpanded(isOpen ? null : details.id);
-    setBreakLine(isOpen ? true : false);
   };
+
   return (
     <>
-      <BreakLine breakLine={breakLine} />
+      <BreakLine
+        animate={{
+          height: isOpen ? "3px" : "1px",
+          backgroundColor: isOpen ? "#000" : "#e6e6e6",
+        }}
+        transition={{ duration: 0.5, ease: [0.6, 0.05, -0.01, 0.9] }}
+      />
       <HeaderWrapper>
         <AccordionHeader
           onClick={handleClick}
@@ -36,7 +37,7 @@ const Accordion = ({ details, expanded, setExpanded }) => {
         animate={{ height: isOpen ? "15%" : "0" }}
         transition={{ duration: 0.5, ease: [0.6, 0.05, -0.01, 0.9] }}
       >
-        <span>{details.subtitle}</span>
+        <span>{details.subtitle}</span>{" "}
       </AccordionContent>
     </>
   );
