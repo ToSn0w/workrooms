@@ -36,7 +36,7 @@ const Navigation = () => {
   const [hidden, setHidden] = useState(false);
   const [show, setShow] = useState(false);
 
-  const [rotation, setRotation] = useState(false);
+  const [rotation, setRotate] = useState(false);
 
   const { scrollY } = useViewportScroll();
 
@@ -80,7 +80,7 @@ const Navigation = () => {
       variants={navVariant}
       animate={hidden ? "hidden" : "visible"}
       transition={{ ease: [0.1, 0.25, 0.3, 1], duration: 0.5 }}
-      $rotation={rotation}
+      rotation={rotation}
     >
       <NavComponent
         variants={navVariant2}
@@ -106,15 +106,15 @@ const Navigation = () => {
               <NavElement
                 onHoverStart={() => {
                   setShow(true);
-                  setRotation(true);
+                  setRotate(true);
                 }}
                 onHoverEnd={() => {
                   setShow(false);
-                  setRotation(false);
+                  setRotate(false);
                 }}
               >
                 produkty
-                <ArrowWrapper $rotation={rotation}>
+                <ArrowWrapper rotation={rotation}>
                   <ArrowDownImage src={"/images/arrow-down2.png"} />
                 </ArrowWrapper>
               </NavElement>
@@ -152,11 +152,11 @@ const Navigation = () => {
           <MenuComponent
             onHoverStart={() => {
               setShow(true);
-              setRotation(true);
+              setRotate(true);
             }}
             onHoverEnd={() => {
               setShow(false);
-              setRotation(false);
+              setRotate(false);
             }}
             initial={{ y: -10, opacity: 0 }}
             animate={{ y: 0, opacity: 1 }}

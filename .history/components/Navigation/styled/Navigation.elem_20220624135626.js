@@ -16,7 +16,7 @@ export const NavWrapper = styled(motion.div)`
     max-width: 80%;
     height: 1px;
     background-color: rgba(0, 0, 0, 0.15);
-    opacity: ${(props) => (props.$rotation === true ? "0" : "1")};
+    opacity: ${(props) => (props.rotation === true ? "0" : "1")};
   }
 `;
 
@@ -48,7 +48,7 @@ export const ArrowWrapper = styled(motion.div)`
   align-items: center;
   width: 24px;
   height: 24px;
-  transform: ${(props) => (props.$rotation === true ? "rotate(-180deg)" : "")};
+  transform: ${(props) => (props.rotation === true ? "rotate(-180deg)" : "")};
   transition: transform 150ms ease;
 `;
 

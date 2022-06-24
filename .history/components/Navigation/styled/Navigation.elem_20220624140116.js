@@ -48,7 +48,7 @@ export const ArrowWrapper = styled(motion.div)`
   align-items: center;
   width: 24px;
   height: 24px;
-  transform: ${(props) => (props.$rotation === true ? "rotate(-180deg)" : "")};
+  transform: ${(props) => (props.rotation === true ? "rotate(-180deg)" : "")};
   transition: transform 150ms ease;
 `;
 

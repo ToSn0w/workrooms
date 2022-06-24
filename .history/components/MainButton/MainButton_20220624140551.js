@@ -5,6 +5,7 @@ import {
   MainButtonComponent,
   Wrapper,
   TextWrapper,
+  ArrowWrapper,
 } from "./styled/MainButton.elem";
 
 const MainButton = ({
@@ -14,29 +15,33 @@ const MainButton = ({
   transparent,
   greyBorder,
   blackText,
-  noBorder,
+  noborder,
   maxWidth,
-  close,
+  midWidth,
+  whiteArrow,
 }) => {
   return (
     <MainButtonComponent
-      transparent={transparent}
+      $transparent={transparent}
       blue={blue}
-      greyBorder={greyBorder}
+      greyborder={greyBorder}
       blackText={blackText}
       noBorder={noBorder}
       maxWidth={maxWidth}
+      midWidth={midWidth}
     >
       <Wrapper noBorder={noBorder} maxWidth={maxWidth}>
-        <TextWrapper>{text}</TextWrapper>
+        <TextWrapper blue={blue}>{text}</TextWrapper>
         {arrow ? (
-          <Image
-            src="/images/arrow-right.png"
-            alt="horizon-workrooms"
-            height="24"
-            width="24"
-            layout="fixed"
-          />
+          <ArrowWrapper whiteArrow={whiteArrow}>
+            <Image
+              src="/images/arrow-right.png"
+              alt="horizon-workrooms"
+              height="24"
+              width="24"
+              layout="fixed"
+            />
+          </ArrowWrapper>
         ) : null}
       </Wrapper>
     </MainButtonComponent>

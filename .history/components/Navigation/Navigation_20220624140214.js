@@ -152,11 +152,11 @@ const Navigation = () => {
           <MenuComponent
             onHoverStart={() => {
               setShow(true);
-              setRotation(true);
+              setRotate(true);
             }}
             onHoverEnd={() => {
               setShow(false);
-              setRotation(false);
+              setRotate(false);
             }}
             initial={{ y: -10, opacity: 0 }}
             animate={{ y: 0, opacity: 1 }}

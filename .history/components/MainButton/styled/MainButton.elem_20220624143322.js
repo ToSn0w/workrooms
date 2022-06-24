@@ -1,6 +1,7 @@
 import styled, { css } from "styled-components";
+import { motion } from "framer-motion";
 
-export const MainButtonComponent = styled.button`
+export const MainButtonComponent = styled(motion.button)`
   display: flex;
   justify-content: center;
   align-items: center;
@@ -49,6 +50,12 @@ export const MainButtonComponent = styled.button`
     css`
       width: 450px;
     `}
+
+      ${(props) =>
+    props.midWidth &&
+    css`
+      width: 280px;
+    `}
 `;
 
 export const Wrapper = styled.div`
@@ -56,8 +63,25 @@ export const Wrapper = styled.div`
   align-items: center;
   justify-content: space-between;
   width: 70%;
+
+  ${(props) =>
+    props.maxWidth &&
+    css`
+      width: 90%;
+    `}
 `;
 
 export const TextWrapper = styled.div`
   /* margin-right: 10px; */
+`;
+
+export const ArrowWrapper = styled.div`
+  display: flex;
+
+  ${(props) =>
+    props.whiteArrow &&
+    css`
+      filter: invert(100%) sepia(100%) saturate(0%) hue-rotate(39deg)
+        brightness(106%) contrast(101%);
+    `}
 `;

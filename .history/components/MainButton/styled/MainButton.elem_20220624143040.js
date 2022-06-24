@@ -1,6 +1,7 @@
 import styled, { css } from "styled-components";
+import { motion } from "framer-motion";
 
-export const MainButtonComponent = styled.button`
+export const MainButtonComponent = styled(motion.button)`
   display: flex;
   justify-content: center;
   align-items: center;
@@ -17,7 +18,7 @@ export const MainButtonComponent = styled.button`
   border-width: ${({ blue }) => (blue ? "0px" : "1px")};
 
   ${(props) =>
-    props.transparent &&
+    props.$transparent &&
     css`
       background-color: transparent;
       color: #fff;
@@ -26,19 +27,19 @@ export const MainButtonComponent = styled.button`
     `}
 
   ${(props) =>
-    props.greyBorder &&
+    props.$greyBorder &&
     css`
       border-color: #c5c5c5;
       border-width: 2px;
     `}
 
     ${(props) =>
-    props.blackText &&
+    props.$blackText &&
     css`
       color: #000;
     `}
        ${(props) =>
-    props.noBorder &&
+    props.$noBorder &&
     css`
       border-width: 0px;
       width: 350px;
@@ -49,6 +50,12 @@ export const MainButtonComponent = styled.button`
     css`
       width: 450px;
     `}
+
+      ${(props) =>
+    props.$midWidth &&
+    css`
+      width: 280px;
+    `}
 `;
 
 export const Wrapper = styled.div`
@@ -58,14 +65,23 @@ export const Wrapper = styled.div`
   width: 70%;
 
   ${(props) =>
-    props.maxWidth &&
+    props.$maxWidth &&
     css`
       width: 90%;
     `}
-
-  
 `;
 
 export const TextWrapper = styled.div`
   /* margin-right: 10px; */
+`;
+
+export const ArrowWrapper = styled.div`
+  display: flex;
+
+  ${(props) =>
+    props.$whiteArrow &&
+    css`
+      filter: invert(100%) sepia(100%) saturate(0%) hue-rotate(39deg)
+        brightness(106%) contrast(101%);
+    `}
 `;
