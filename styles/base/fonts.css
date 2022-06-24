@@ -1,0 +1,32 @@
+@font-face {
+    font-family: 'NeuePlakText-Thin';
+    src: url('/fonts/NeuePlakText-Thin.woff2') format('woff2');
+    font-style: normal;
+    font-weight: 400;
+    font-display: swap;
+  }
+
+  
+@font-face {
+    font-family: 'NeuePlakText-Bold';
+    src: url('/fonts/NeuePlakText-Bold.woff2') format('woff2');
+    font-style: normal;
+    font-weight: 400;
+    font-display: swap;
+  }
+
+  @font-face {
+    font-family: 'NeuePlakText-SemiBold';
+    src: url('/fonts/NeuePlakText-SemiBold.woff2') format('woff2');
+    font-style: normal;
+    font-weight: 400;
+    font-display: swap;
+  }
+  
+@font-face {
+    font-family: 'NeuePlakText-Black';
+    src: url('/fonts/NeuePlakText-Black.woff2') format('woff2');
+    font-style: normal;
+    font-weight: 400;
+    font-display: swap;
+  }
