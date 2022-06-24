@@ -1,10 +1,6 @@
-import React, { useState } from "react";
-import { motion } from "framer-motion";
-
-import Image from "next/Image";
+import React from "react";
 
 import {
-  AccordionComponent,
   AccordionHeader,
   HeaderWrapper,
   AccordionContent,
