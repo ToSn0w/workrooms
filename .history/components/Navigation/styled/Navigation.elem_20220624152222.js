@@ -9,6 +9,8 @@ export const NavWrapper = styled(motion.div)`
   top: 0;
   background-color: #fff;
   z-index: 1;
+
+  
 `;
 
 export const NavComponent = styled(motion.div)`
@@ -22,10 +24,8 @@ export const NavComponent = styled(motion.div)`
 export const NavContainer = styled(Container)`
   display: flex;
   justify-content: space-between;
-  padding: 0;
+  padding: 0 20px;
   align-items: center;
-  border-bottom: 1px solid;
-  border-color: rgb(137, 137, 137, 0.2);
 `;
 
 export const NavLogoComp = styled(motion.a)`
@@ -94,7 +94,7 @@ export const ArrowDownImage = styled.img`
 
 export const NavIcons = styled.div`
   display: flex;
-  justify-content: end;
+  justify-content: center;
   align-items: center;
   width: 110px;
   .break {
@@ -148,7 +148,6 @@ export const NavLowerElement = styled(motion.a)`
 
   &:first-child {
     color: #000;
-    padding-left: 0;
   }
   &:hover {
     color: #418af7;

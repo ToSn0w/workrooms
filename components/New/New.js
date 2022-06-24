@@ -29,7 +29,7 @@ const New = () => {
   //intersection-observer
   const [functionRef, inView] = useInView({
     triggerOnce: true,
-    rootMargin: "-600px",
+    rootMargin: "-200px",
   });
   //useEffect
   useEffect(() => {

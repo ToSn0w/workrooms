@@ -140,6 +140,7 @@ export const NavLowerElements = styled(motion.div)`
 
 export const NavLowerElement = styled(motion.a)`
   padding: 20px;
+  padding-left: 0;
   font-family: "NeuePlakText-Black";
   font-size: 14px;
   text-transform: uppercase;
@@ -148,7 +149,6 @@ export const NavLowerElement = styled(motion.a)`
 
   &:first-child {
     color: #000;
-    padding-left: 0;
   }
   &:hover {
     color: #418af7;
