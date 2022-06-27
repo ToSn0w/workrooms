@@ -26,7 +26,7 @@ const Productivity = () => {
   //intersection-observer
   const [functionRef, inView] = useInView({
     triggerOnce: true,
-    rootMargin: "-400px",
+    rootMargin: "-300px",
   });
 
   useEffect(() => {
