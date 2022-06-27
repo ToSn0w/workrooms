@@ -32,7 +32,7 @@ const Header = () => {
   //intersection-observer
   const [aboutRef, inView] = useInView({
     triggerOnce: true,
-    rootMargin: "-300px",
+    rootMargin: "-400px",
   });
 
   useEffect(() => {
