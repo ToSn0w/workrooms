@@ -35,7 +35,7 @@ const Scroll = ({ scrollIDs }) => {
   //intersection-observer
   const [functionRef, inView] = useInView({
     triggerOnce: true,
-    rootMargin: "-200px",
+    rootMargin: "-400px",
   });
 
   useEffect(() => {
